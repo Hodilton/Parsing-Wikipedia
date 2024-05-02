@@ -31,7 +31,7 @@ class FileProcessor:
         return data
 
     @staticmethod
-    def write_file(path_params, data, overwrite=True):
+    def write_file(path_params, data, overwrite=False):
         specified_keys = ["folder_path", "file_name", "extension"]
 
         if not Check.dictionary_specified(path_params, specified_keys):
