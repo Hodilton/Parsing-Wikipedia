@@ -3,14 +3,38 @@ import re
 
 class DefinitionFormatter:
     @staticmethod
+    # def format_definition(definition):
+    #     without_square_brackets = re.sub(r'\[\d+\]', '', definition)
+    #
+    #     without_before_the_dash = DefinitionFormatter.remove_to_dash(without_square_brackets)
+    #
+    #     without_after_dot = DefinitionFormatter.remove_after_dot(without_before_the_dash)
+    #
+    #     formatted_definition = DefinitionFormatter.upper_one_letter(without_after_dot, 0)
+    #
+    #     return formatted_definition
     def format_definition(definition):
+        print(f"Original definition: {definition}")
+
         without_square_brackets = re.sub(r'\[\d+\]', '', definition)
+        print(f"Without square brackets: {without_square_brackets}")
 
         without_before_the_dash = DefinitionFormatter.remove_to_dash(without_square_brackets)
+        print(f"Without before the dash: {without_before_the_dash}")
+
+        if not without_before_the_dash or len(without_before_the_dash) < 2:
+            print(f"Skipping formatting due to short or empty string: {without_before_the_dash}")
+            return without_before_the_dash
 
         without_after_dot = DefinitionFormatter.remove_after_dot(without_before_the_dash)
+        print(f"Without after dot: {without_after_dot}")
+
+        if not without_after_dot or len(without_after_dot) < 2:
+            print(f"Skipping formatting due to short or empty string: {without_after_dot}")
+            return without_after_dot
 
         formatted_definition = DefinitionFormatter.upper_one_letter(without_after_dot, 0)
+        print(f"Formatted definition: {formatted_definition}")
 
         return formatted_definition
 
