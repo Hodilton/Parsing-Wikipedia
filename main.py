@@ -10,7 +10,7 @@ if __name__ == '__main__':
                    'extension': 'json'}
 
     csv_params = {'folder_path': "data",
-                  'file_name': "definitions1",
+                  'file_name': "definitions",
                   'extension': 'csv'}
 
     try:
