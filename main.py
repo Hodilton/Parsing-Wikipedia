@@ -1,5 +1,5 @@
 from file_work.file_processor import FileProcessor
-from src.url_handler import UrlHandler
+from src.url_handler import DefinitionHandler
 from src.test_handler import TestHandler
 
 from utils.utilities import Raise
@@ -10,17 +10,17 @@ if __name__ == '__main__':
                    'extension': 'json'}
 
     csv_params = {'folder_path': "data",
-                  'file_name': "definitions",
+                  'file_name': "definitions1",
                   'extension': 'csv'}
 
     try:
         data_json = FileProcessor.read_file(json_params)
-        term_definitions = UrlHandler.parse_definitions(data_json["urls"])
+        term_definitions = DefinitionHandler.extract_definitions(data_json["urls"])
 
-        FileProcessor.write_file(csv_params, term_definitions)
+        FileProcessor.write_file(csv_params, term_definitions, overwrite=True)
         data_csv = FileProcessor.read_file(csv_params)
 
-        TestHandler.start_test(data_csv)
+        TestHandler.start(data_csv)
 
     except Exception as e:
         Raise.try_error(e)
