@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from definition_formatter import DefinitionFormatter
+from .definition_formatter import DefinitionFormatter
 from utils.utilities import Raise
 
 

@@ -10,7 +10,7 @@ A Python application that fetches term definitions from Wikipedia pages and crea
 - 📊 **Progress Tracking** - Shows real-time score and correct answers
 - 💾 **Data Management** - Saves processed definitions to CSV
 
-## How to Use
+## How to Work
 1. Prepare a JSON file with Wikipedia URLs (see `data/links.json` example)
 ```json
 {
@@ -20,15 +20,14 @@ A Python application that fetches term definitions from Wikipedia pages and crea
   ]
 }
 ```
-2. Run the main script: `python main.py`
-3. Proramm parse defifnition
+2. Proramm parse defifnition
 ```python
 Data '..\data\links.json' read successfully.
 Parsing 1/77...
 Parsing 2/77...
 Parsing 3/77...
 ```
-4. Take the quiz by selecting correct definitions
+3. Take the quiz by selecting correct definitions
 ```
 Score: 1
 Question: Интерфе́йс

@@ -1,8 +1,8 @@
 from file_work.file_processor import FileProcessor
-from url_handler import UrlHandler
-from test_handler import TestHandler
+from src.url_handler import UrlHandler
+from src.test_handler import TestHandler
 
-from utils.utilities import Raise, Print
+from utils.utilities import Raise
 
 if __name__ == '__main__':
     json_params = {'folder_path': "data",
