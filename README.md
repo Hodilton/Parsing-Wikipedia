@@ -34,7 +34,7 @@ Parsing 3/77...
 | Система типов | Совокупность правил в языках программирования, назначающих свойства, именуемые типами, различным конструкциям, составляющим программу — таким как переменные, выражения, функции или модули. | [Wikipedia](https://ru.wikipedia.org/wiki/Система_типов)       |
 | Адрес         | Символ или группа символов, которые идентифицируют регистр, отдельные части памяти или некоторые другие источники данных, либо место назначения информации.                                  | [Wikipedia](https://ru.wikipedia.org/wiki/Адрес_(информатика)) |
 
-Download: [definitions.csv](./data/definitions.csv)
+Download: [definitions.csv](./data/definitions.csv).
 4. Take the quiz by selecting correct definitions
 ```
 Score: 1
